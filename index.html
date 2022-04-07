@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220407213100" /> -->
+  <link rel="stylesheet" href="css/style.min.css?_v=20220407213100">
+  <title>Гипром Сервис</title>
+</head>
+
+<body>
+  <header id="header" class="header">
+  <div class="container">
+    <nav class="nav-bar nav-bar--active">
+      <a class="nav-bar__logo li-nk" href="#header">
+        <img src="images/logo.svg" alt="logo">
+      </a>
+      <ul class="nav-bar__list">
+        <li>
+          <a class="nav-bar__link li-nk" href="#about">О компании </a>
+        </li>
+        <li>
+          <a class="nav-bar__link li-nk" href="#services">Услуги</a>
+        </li>
+        <li>
+          <a class="nav-bar__link li-nk" href="#object">Объекты</a>
+        </li>
+        <li>
+          <a class="nav-bar__link li-nk" href="#news">Новости</a>
+        </li>
+        <li>
+          <a class="nav-bar__link li-nk" href="#footer">Контакты</a>
+        </li>
+      </ul>
+      <a class="nav-bar__phone" href="#">
+        <img src="images/icons/icon-phone.svg" alt="phone">
+      </a>
+    </nav>
+
+    <div class="header-main">
+
+      <div class="header-main__inner">
+        <div class="header-main__logo">
+          <img src="images/logo.svg" alt="logo">
+        </div>
+        <h1 class="title header-main__title">Обслуживание многоквартирных домов</h1>
+        <div class="text header-main__text">
+          <p>
+            Обслуживающая организация, на которую можно положиться, чтобы забыть о жилищных проблемах
+          </p>
+        </div>
+      </div>
+
+      <nav class="header-main__nav">
+        <div class="header-main__item header-main__item-1">
+          <h3 class="title header-main__item-title">С нами легко связаться</h3>
+          <div class="header-main__item-text">
+            <p>
+              <span>Приемная: 44-02-62</span><br>
+              Пн - Пт 8:00 - 17:00
+            </p>
+            <p>
+              <span>Аварийная служба: <br>73-68-58</span><br>
+              Круглосуточно
+            </p>
+          </div>
+          <a class="header-main__item-arrow li-nk" href="#footer"></a>
+        </div>
+        <div class="header-main__items">
+          <div class="header-main__item header-main__item-2">
+            <h3 class="title header-main__item-title">Наши объекты</h3>
+            <div class="header-main__item-text">
+              Дома, за содержание которых мы несем ответственность
+            </div>
+            <a class="header-main__item-arrow li-nk" href="#object"></a>
+          </div>
+          <div class="header-main__item header-main__item-3">
+            <h3 class="title header-main__item-title">Большой выбор услуг</h3>
+            <div class="header-main__item-text">
+
+            </div>
+            <a class="header-main__item-arrow li-nk" href="#services"></a>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</header>
+  <main>
+    <div class="container">
+
+      <section id="about" class="about">
+        <h2 class="big-title about__big-title">О компании</h2>
+        <div class="about__inner">
+          <div class="about__images">
+            <picture><source srcset="./images/about-1.webp" type="image/webp"><img class="about__image-1" src="./images/about-1.jpg" alt="hous"></picture>
+            <picture><source srcset="./images/about-2.webp" type="image/webp"><img class="about__image-2" src="./images/about-2.jpg" alt="hous"></picture>
+            <picture><source srcset="./images/about-3.webp" type="image/webp"><img class="about__image-3" src="./images/about-3.jpg" alt="hous"></picture>
+          </div>
+          <ol class="about__list">
+            <li class="text about__list-item">Заключаем договоры на управление, содержание и текущий ремонт общего
+              имущества
+              в многоквартирных жилых домах с физическими и юридическими лицами, являющимися собственниками таких домов,
+              ТСЖ, жилищно–строительными кооперативами.
+            </li>
+            <li class="text about__list-item">Мы являемся частью группы компаний, занимающейся проектированием,
+              поставкой,
+              монтажом всех инженерных систем, включая отопление, водоснабжение, вентиляцию и электроснабжение, а также
+              ремонтными работами в строительной отрасли (крыши, фасады и т.п.).</li>
+            <li class="text about__list-item">Приглашаем к сотрудничеству, оказываем помощь в проведении общих собраний
+              собственников: выбор способа управления (образование ТСН), переход на специальный счет по кап. ремонту и
+              т.д. </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <h2 class="title services__title">Предлагаем большой выбор услуг для вашей квартиры
+        </h2>
+        <h3 class="big-title services__big-title">Услуги</h3>
+
+        <div class="services__slider slider swiper">
+
+          <div class="slider__wrapper swiper-wrapper ">
+            <div class="slider__item swiper-slide">
+              <picture><source srcset="./images/slide-1.webp" type="image/webp"><img class="slider__img" src="./images/slide-1.jpg" alt="slide-1"></picture>
+              <h4 class="slider__item-title">Отделочные работы</h4>
+              <div class="slider__item-text">Выполним работы от замены стекол до перестилки дощатого пола или линолеума
+              </div>
+              <a class="slider__item-bottom" href="#">Перейти к прайсу</a>
+            </div>
+
+            <div class="slider__item swiper-slide">
+              <picture><source srcset="./images/slide-2.webp" type="image/webp"><img class="slider__img" src="./images/slide-2.jpg" alt="slide-2"></picture>
+              <h4 class="slider__item-title">Строительные работы</h4>
+              <div class="slider__item-text">Выполним работы от замены стекол до перестилки дощатого пола или линолеума
+              </div>
+              <a class="slider__item-bottom" href="#">Перейти к прайсу</a>
+            </div>
+
+            <div class="slider__item swiper-slide">
+              <picture><source srcset="./images/slide-3.webp" type="image/webp"><img class="slider__img" src="./images/slide-3.jpg" alt="slide-3"></picture>
+              <h4 class="slider__item-title">Электро-монтажные работы</h4>
+              <div class="slider__item-text">Выполним работы от замены стекол до перестилки дощатого пола или линолеума
+              </div>
+              <a class="slider__item-bottom" href="#">Перейти к прайсу</a>
+            </div>
+
+            <div class="slider__item swiper-slide">
+              <picture><source srcset="./images/slide-4.webp" type="image/webp"><img class="slider__img" src="./images/slide-4.jpg" alt="slide-4"></picture>
+              <h4 class="slider__item-title">Сантехнические работы</h4>
+              <div class="slider__item-text">Выполним работы от замены стекол до перестилки дощатого пола или линолеума
+              </div>
+              <a class="slider__item-bottom" href="#">Перейти к прайсу</a>
+            </div>
+
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section id="object" class="object">
+        <h2 class="big-title object__big-title">Объекты</h2>
+        <div class="object_number">
+          <span>01.</span>
+          Сутырина, 3
+        </div>
+        <div class="object__wrapper">
+          <div class="object__images">
+            <picture><source srcset="./images/object-1.webp" type="image/webp"><img class="object__img-1" src="./images/object-1.jpg" alt="object"></picture>
+            <picture><source srcset="./images/object-2.webp" type="image/webp"><img class="object__img-2" src="./images/object-2.jpg" alt="object"></picture>
+          </div>
+          <div class="object__discription">
+            <h3 class="title object__discription-title">Помогаем жителям дома экономить до
+              3 млн рублей в год </h3>
+            <div class="object__discription-text">
+              <p>
+                В тесном взаимодействии с правлением ТСЖ и жителями в течении года подготовили и провели работы по
+                энергоэффективному ремонту на сумму 4,41 млн. руб., из которых 80% это финансовая поддержка Фонда
+                содействия реформирования ЖКХ.
+              </p>
+              <p>
+                Были установлены автоматизированные узлы отопления с погодозависимым регулированием параметров
+                теплоносителя в системе отопления в каждом подъезде, капитальный ремонт кровли, утепление подвальных
+                помещений, замена окон и наружных входных дверей в подъездах.
+              </p>
+            </div>
+            <a class="object__discription-link" href="#">Все объекты</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="news" class="news">
+        <h3 class="news__title">новости</h3>
+        <h3 class="big-title news__big-title">Будьте в курсе событий</h3>
+        <div class="news__images">
+          <picture><source srcset="./images/news-1.webp" type="image/webp"><img class="news__img-1" src="./images/news-1.jpg" alt="картинка"></picture>
+          <picture><source srcset="./images/news-2.webp" type="image/webp"><img class="news__img-2" src="./images/news-2.jpg" alt="картинка"></picture>
+          <picture><source srcset="./images/news-3.webp" type="image/webp"><img class="news__img-3" src="./images/news-3.jpg" alt="картинка"></picture>
+        </div>
+        <div class="news__items">
+          <div class="news__item">
+            <h4 class="news__item-title">Пилотный проект по энергоэффективному капремонту</h4>
+            <div class="news__item-text">
+              <p>
+                Кировская область получит из средств Фонда содействия реформирования ЖКХ 3,52 млн рублей. Общая
+                стоимость работ по ...
+              </p>
+            </div>
+            <div class="news__item-bottom">
+              <div class="news__item-data">15.02.2021</div>
+              <a class="news__item-link all-news__item-btn-1" href="#"><span>Подробнее</span></a>
+            </div>
+          </div>
+
+          <div class="news__item">
+            <h4 class="news__item-title">Капремонт на Сутырина 3</h4>
+            <div class="news__item-text">
+              <p>
+                Капремонт позволил жителям дома на Сутырина сэкономить на «коммуналке».
+              </p>
+            </div>
+            <div class="news__item-bottom">
+              <div class="news__item-data">02.02.2021</div>
+              <a class="news__item-link all-news__item-btn-2" href="#"><span>Подробнее</span></a>
+            </div>
+          </div>
+
+          <div class="news__item">
+            <h4 class="news__item-title">Замена бракованных водосчетчиков</h4>
+            <div class="news__item-text">
+              <p>
+                Мы производим работы по замене бракованных водосчетчиков в квартирах. На данный момент насчитывается
+                более ...
+              </p>
+            </div>
+            <div class="news__item-bottom">
+              <div class="news__item-data">01.01.2021</div>
+              <a class="news__item-link all-news__item-btn-3" href="#"><span>Подробнее</span></a>
+            </div>
+          </div>
+        </div>
+        <a class="news__btn" href="#"><span>Все новости</spa></a>
+      </section>
+
+
+    </div>
+  </main>
+  <div class="container">
+  <footer id="footer" class="footer">
+    <div class="footer__items">
+      <div class="footer__item">
+        <div class="footer__item-text">
+          <p>
+            <span>Приемная: 44-02-62</span><br>
+            Пн - Пт 8:00 - 17:00
+          </p>
+          <p>
+            <span>Аварийная служба: 73-68-58</span><br>
+            Круглосуточно
+          </p>
+        </div>
+      </div>
+
+      <div class="footer__item">
+        <p class="footer__item-address">
+          г.Киров, ул. Орловская, 20б
+        </p>
+        <a class="footer__item-email" href="mailto:gipromservice@mail.ru">gipromservice@mail.ru</a>
+        <a class="footer__item-vk" href="#"><img src="./images/icons/vk.svg" alt="vk"></a>
+      </div>
+
+      <div class="footer__item">
+        <a class="footer__item-link" href="#">Все контакты и реквизиты</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__bottom-copy">© 2021, Все права защищены</div>
+      <div class="footer__bottom-design">Разработка сайта</div>
+    </div>
+
+  </footer>
+</div>
+  <div class="object-modal ">
+  <div class="object-modal__wrapper">
+    <button class="object-modal__close-btn" type="button"></button>
+    <div class="object-modal__item">
+      <h3 class="object-modal__item-title">Объекты в обслуживании</h3>
+      <div class="object-modal__item-tabs">
+        <a class="object-modal__item-tab object-modal__item-tab--active" href="#object-1">Ул. Сутырина, д. 3 </a>
+        <a class="object-modal__item-tab" href="#object-2">Ул. Воровского, д. 91А</a>
+        <a class="object-modal__item-tab" href="#object-3">Ул. Ленина, д. 196А</a>
+        <a class="object-modal__item-tab" href="#object-4">Ул. Жуковского, д. 6к1</a>
+      </div>
+      <div class="object-modal__item-bottom">Дома, за содержание которых мы несем ответственность</div>
+    </div>
+    <div class="object-modal__maps">
+      <div id="object-1" class="object-modal__map object-modal__map--active">
+        <picture><source srcset="../images/map-1.webp" type="image/webp"><img src="../images/map-1.jpg" alt="map"></picture>
+      </div>
+      <div id="object-2" class="object-modal__map">
+        <picture><source srcset="../images/map-2.webp" type="image/webp"><img src="../images/map-2.jpg" alt="map"></picture>
+      </div>
+      <div id="object-3" class="object-modal__map">
+        <picture><source srcset="../images/map-3.webp" type="image/webp"><img src="../images/map-3.jpg" alt="map"></picture>
+      </div>
+      <div id="object-4" class="object-modal__map">
+        <picture><source srcset="../images/map-4.webp" type="image/webp"><img src="../images/map-4.jpg" alt="map"></picture>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="news-list">
+  <div class="news-list__wrapper">
+    <div class="news-list__top">
+      <button class="news-list__top-link">Все новости</button>
+      <button class="news-list__top-close"></button>
+    </div>
+
+    <div class="news-list__item">
+  <h3 class="title news-list__title">Пилотный проект по энергоэффективному капремонту</h3>
+  <div class="text news-list__text">
+    <p>
+      Государственная корпорация Фонда содействия реформированию ЖКХ одобрила заявку Кировской области на получение
+      финансовой поддержки для проведения первого энергоэффективного капитального ремонта многоквартирного дома в
+      Кирове на ул. Сутырина, 3.
+    </p>
+    <p>
+      Кировская область получит из средств Фонда содействия реформирования ЖКХ 3,52 млн рублей. Общая стоимость
+      работ по энергоэффективному капремонту в этом доме составляет 4,41 млн рублей, таким образом финансовая
+      поддержка Фонда составляет 80% от общей суммы затрат на ремонт.
+    </p>
+    <p>
+      В многоквартирном доме в Кирове на ул. Сутырина, 3 планируется установить автоматизированный узел управления
+      системой отопления (АУУ СО) с погодозависимым регулированием параметров теплоносителя в системе отопления,
+      повысить теплозащиту перекрытий над подвалом, а также окон в местах общего пользования, уплотнить наружные
+      входные двери. Планируется заменить лампы накаливания в местах общего пользования на светодиодные.
+    </p>
+  </div>
+  <div class="news-list__images news-list__images-2-1">
+    <picture><source srcset="images/news-list/img-1-1.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-1-1.jpg" alt="img"></picture>
+    <picture><source srcset="images/news-list/img-1-2.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-1-2.jpg" alt="img"></picture>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+    <div class="news-list__item">
+  <h3 class="title news-list__title">Сутырина 3 — «Сказочный город»</h3>
+  <div class="text news-list__text">
+    <p>
+      МКД Сутырина 3 действительно «Сказочный город». Дом в котором действительно хочется жить. Вот так благоустроен
+      двор в этом доме. Чистота, порядок, роскошные клумбы и цветы. А ещё… у каждого подъезда посажены туи!
+    </p>
+
+  </div>
+  <div class="news-list__images news-list__images-6">
+    <picture><source srcset="images/news-list/img-2-1.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-2-1.jpg" alt="img"></picture>
+    <picture><source srcset="images/news-list/img-2-2.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-2-2.jpg" alt="img"></picture>
+    <picture><source srcset="images/news-list/img-2-3.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-2-3.jpg" alt="img"></picture>
+    <picture><source srcset="images/news-list/img-2-4.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-2-4.jpg" alt="img"></picture>
+    <picture><source srcset="images/news-list/img-2-5.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-2-5.jpg" alt="img"></picture>
+    <picture><source srcset="images/news-list/img-2-6.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-2-6.jpg" alt="img"></picture>
+  </div>
+</div>
+    <div class="news-list__item">
+  <h3 class="title news-list__title">Капитальный ремонт: кому можно не платить взносы в фонд</h3>
+  <div class="text news-list__text">
+    <p>
+      Взносы за капитальный ремонт многоквартирных домов — обязательные платежи. Некоторые собственники их не
+      платят,
+      но это исключение. Например, речь идет о гражданах 80 лет и старше или когда дом аварийный и его скоро снесут.
+    </p>
+    <p>
+      Взносы собственников попадают в специальные фонды и копятся там. Когда приходит время проводить в доме
+      капитальный ремонт, деньги пойдут из этого фонда и жильцам не придется скидываться большими суммами. Размер
+      взносов определяется на законодательном уровне и зависит от характеристик здания. Но вносить их должны все
+      собственники, это обязанность по закону, а не добровольный платеж. Квитанции на оплату капремонта россияне
+      начали получать с 2015 года.
+    </p>
+    <p>Таким образом, эти платежи относятся к коммунальным услугам. Однако при продаже квартиры долги за капремонт
+      переходят к новому собственнику, а за остальную коммуналку — нет.</p>
+    <p>Существует два способа накопления взносов на капитальный ремонт: так называемый общий котел, когда деньги
+      перечисляются региональному оператору капитального ремонта (есть в каждом регионе), и специальный счет, на
+      котором копятся взносы собственников конкретного дома. Владельцем спецсчета может выступать либо тот же
+      региональный оператор, либо управляющая компания, либо ТСЖ/ЖСК.</p>
+  </div>
+  <div class="news-list__images">
+    <picture><source srcset="images/news-list/img-3-1.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-3-1.jpg" alt="img"></picture>
+  </div>
+</div>
+    <div class="news-list__item">
+  <h3 class="title news-list__title">Как сэкономить на коммунальных платежах</h3>
+  <div class="text news-list__text">
+    <p>
+      Сдержать рост тарифов мы не можем, но уменьшить сумму в квитанциях можно, зная несколько хитростей.
+      Воспользуйтесь нашими советами и не тратьте деньги впустую.
+    </p>
+
+  </div>
+  <div class="news-list__inner">
+    <ol class="news-list__list">
+      <li class="news-list__list-item">
+        Отключите услуги, которыми не пользуетесь
+      </li>
+      <li class="news-list__list-item">
+        Установите многотарифный электросчетчик
+      </li>
+      <li class="news-list__list-item">
+        Берегите воду
+      </li>
+      <li class="news-list__list-item">
+        Установите энергосберегающие лампы, которые будут помогать вам экономить свет
+      </li>
+      <li class="news-list__list-item">
+        Не оставляйте приборы в сети
+      </li>
+      <li class="news-list__list-item">
+        Используйте технику разумно
+      </li>
+    </ol>
+    <div class="news-list__images">
+      <picture><source srcset="images/news-list/img-4-1.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-4-1.jpg" alt="img"></picture>
+    </div>
+  </div>
+</div>
+    <div class="news-list__item">
+  <h3 class="title news-list__title">Кому положены льготы на капремонт</h3>
+  <div class="text news-list__text">
+    <p> Льготы по оплате капремонта положены нескольким категориям граждан: пожилые люди, достигшие 70-летнего
+      возраста, оплачивают 50% суммы, а 80-летние освобождены от взносов полностью.</p>
+    <p>Граждане с ограниченными возможностями (инвалиды первой и второй групп) также получают скидку 50%, если они
+      являются собственниками квартиры. Дисконт действует только в том случае, если они проживают одни. Для
+      получения компенсации по оплате капремонта нужно предоставить в МФЦ все необходимые документы, подтверждающие
+      право на получение льготы. Заявление будет рассмотрено в течение десяти рабочих дней.</p>
+    <p>Перед тем как собирать документы, нужно погасить все задолженности за ЖКУ и капремонт, если они имеются.
+      Пакет необходимых документов включает в себя паспорт, справку об отсутствии задолженности за услуги ЖКХ,
+      свидетельство о праве на получение льготы.</p>
+  </div>
+  <div class="news-list__images news-list__images-2">
+    <picture><source srcset="images/news-list/img-5-1.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-5-1.jpg" alt="img"></picture>
+    <picture><source srcset="images/news-list/img-5-2.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-5-2.jpg" alt="img"></picture>
+  </div>
+</div>
+
+  </div>
+</div>
+  <div class="all-news">
+  <div class="all-news__wrapper">
+    <button class="all-news__close" type="button"></button>
+    <h3 class="title all-news__title">Новости</h3>
+
+    <div class="all-news__items">
+      <div class="all-news__item">
+        <h4 class="title all-news__item-title">Пилотный проект по энергоэффективному капремонту</h4>
+        <div class="text all-news__item-text">
+          <p>
+            Кировская область получит из средств Фонда содействия реформирования ЖКХ 3,52 млн рублей. Общая стоимость
+            работ по энергоэффективному капремонту в этом доме составляет ...
+          </p>
+        </div>
+        <div class="all-news__item-bottom">
+          <div class="all-news__item-data">15.02,2022</div>
+          <button class="all-news__item-btn all-news__item-btn-1"><span>Подробнее</span></button>
+        </div>
+      </div>
+
+      <div class="all-news__item">
+        <h4 class="title all-news__item-title">Капремонт на Сутырина 3</h4>
+        <div class="text all-news__item-text">
+          <p>
+            Энергоэффективный капремонт сэкономит жителям расходы на оплату коммунальных ресурсов до 40%.
+          </p>
+        </div>
+        <div class="all-news__item-bottom">
+          <div class="all-news__item-data">15.02,2022</div>
+          <button class="all-news__item-btn all-news__item-btn-2"><span>Подробнее</span></button>
+
+        </div>
+      </div>
+
+      <div class="all-news__item">
+        <h4 class="title all-news__item-title">Пилотный проект по энергоэффективному капремонту</h4>
+        <div class="text all-news__item-text">
+          <p>
+            Кировская область получит из средств Фонда содействия реформирования ЖКХ 3,52 млн рублей. Общая стоимость
+            работ по энергоэффективному капремонту в этом доме составляет ...
+          </p>
+        </div>
+        <div class="all-news__item-bottom">
+          <div class="all-news__item-data">15.02,2022</div>
+          <button class="all-news__item-btn all-news__item-btn-1"><span>Подробнее</span></button>
+
+        </div>
+      </div>
+
+      <div class="all-news__item">
+        <h4 class="title all-news__item-title">Капремонт на Сутырина 3</h4>
+        <div class="text all-news__item-text">
+          <p>
+            Энергоэффективный капремонт сэкономит жителям расходы на оплату коммунальных ресурсов до 40%.
+          </p>
+        </div>
+        <div class="all-news__item-bottom">
+          <div class="all-news__item-data">15.02,2022</div>
+          <button class="all-news__item-btn all-news__item-btn-2"><span>Подробнее</span></button>
+
+        </div>
+      </div>
+    </div>
+    <button class="all-news__btn" type="button"><span>Показать еще</spa></button>
+  </div>
+</div>
+  <div id="modal-news-1" class="modal-news">
+  <div class="modal-news__wrapper">
+    <div class="news-list__top">
+      <button class="news-list__top-link">Все новости</button>
+      <button class="news-list__top-close"></button>
+    </div>
+    <div class="news-list__item">
+  <h3 class="title news-list__title">Пилотный проект по энергоэффективному капремонту</h3>
+  <div class="text news-list__text">
+    <p>
+      Государственная корпорация Фонда содействия реформированию ЖКХ одобрила заявку Кировской области на получение
+      финансовой поддержки для проведения первого энергоэффективного капитального ремонта многоквартирного дома в
+      Кирове на ул. Сутырина, 3.
+    </p>
+    <p>
+      Кировская область получит из средств Фонда содействия реформирования ЖКХ 3,52 млн рублей. Общая стоимость
+      работ по энергоэффективному капремонту в этом доме составляет 4,41 млн рублей, таким образом финансовая
+      поддержка Фонда составляет 80% от общей суммы затрат на ремонт.
+    </p>
+    <p>
+      В многоквартирном доме в Кирове на ул. Сутырина, 3 планируется установить автоматизированный узел управления
+      системой отопления (АУУ СО) с погодозависимым регулированием параметров теплоносителя в системе отопления,
+      повысить теплозащиту перекрытий над подвалом, а также окон в местах общего пользования, уплотнить наружные
+      входные двери. Планируется заменить лампы накаливания в местах общего пользования на светодиодные.
+    </p>
+  </div>
+  <div class="news-list__images news-list__images-2-1">
+    <picture><source srcset="images/news-list/img-1-1.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-1-1.jpg" alt="img"></picture>
+    <picture><source srcset="images/news-list/img-1-2.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-1-2.jpg" alt="img"></picture>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+  </div>
+</div>
+
+<div id="modal-news-2" class="modal-news">
+  <div class="modal-news__wrapper">
+    <div class="news-list__top">
+      <button class="news-list__top-link">Все новости</button>
+      <button class="news-list__top-close"></button>
+    </div>
+    <div class="news-list__item">
+  <h3 class="title news-list__title">Сутырина 3 — «Сказочный город»</h3>
+  <div class="text news-list__text">
+    <p>
+      МКД Сутырина 3 действительно «Сказочный город». Дом в котором действительно хочется жить. Вот так благоустроен
+      двор в этом доме. Чистота, порядок, роскошные клумбы и цветы. А ещё… у каждого подъезда посажены туи!
+    </p>
+
+  </div>
+  <div class="news-list__images news-list__images-6">
+    <picture><source srcset="images/news-list/img-2-1.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-2-1.jpg" alt="img"></picture>
+    <picture><source srcset="images/news-list/img-2-2.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-2-2.jpg" alt="img"></picture>
+    <picture><source srcset="images/news-list/img-2-3.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-2-3.jpg" alt="img"></picture>
+    <picture><source srcset="images/news-list/img-2-4.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-2-4.jpg" alt="img"></picture>
+    <picture><source srcset="images/news-list/img-2-5.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-2-5.jpg" alt="img"></picture>
+    <picture><source srcset="images/news-list/img-2-6.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-2-6.jpg" alt="img"></picture>
+  </div>
+</div>
+  </div>
+</div>
+
+<div id="modal-news-3" class="modal-news">
+  <div class="modal-news__wrapper">
+    <div class="news-list__top">
+      <button class="news-list__top-link">Все новости</button>
+      <button class="news-list__top-close"></button>
+    </div>
+    <div class="news-list__item">
+  <h3 class="title news-list__title">Капитальный ремонт: кому можно не платить взносы в фонд</h3>
+  <div class="text news-list__text">
+    <p>
+      Взносы за капитальный ремонт многоквартирных домов — обязательные платежи. Некоторые собственники их не
+      платят,
+      но это исключение. Например, речь идет о гражданах 80 лет и старше или когда дом аварийный и его скоро снесут.
+    </p>
+    <p>
+      Взносы собственников попадают в специальные фонды и копятся там. Когда приходит время проводить в доме
+      капитальный ремонт, деньги пойдут из этого фонда и жильцам не придется скидываться большими суммами. Размер
+      взносов определяется на законодательном уровне и зависит от характеристик здания. Но вносить их должны все
+      собственники, это обязанность по закону, а не добровольный платеж. Квитанции на оплату капремонта россияне
+      начали получать с 2015 года.
+    </p>
+    <p>Таким образом, эти платежи относятся к коммунальным услугам. Однако при продаже квартиры долги за капремонт
+      переходят к новому собственнику, а за остальную коммуналку — нет.</p>
+    <p>Существует два способа накопления взносов на капитальный ремонт: так называемый общий котел, когда деньги
+      перечисляются региональному оператору капитального ремонта (есть в каждом регионе), и специальный счет, на
+      котором копятся взносы собственников конкретного дома. Владельцем спецсчета может выступать либо тот же
+      региональный оператор, либо управляющая компания, либо ТСЖ/ЖСК.</p>
+  </div>
+  <div class="news-list__images">
+    <picture><source srcset="images/news-list/img-3-1.webp" type="image/webp"><img class="news-list__img" src="images/news-list/img-3-1.jpg" alt="img"></picture>
+  </div>
+</div>
+  </div>
+</div>
+  <div class="modal-contact">
+  <div class="modal-contact__wrapper">
+    <button class="modal-contact__closed" type="button"></button>
+    <h4 class="title modal-contact__title">Контакты и реквизиты</h4>
+    <div class="modal-contact__items">
+
+      <div class="modal-contact__item">
+        <div class="modal-contact__name">
+          Наименование организации
+        </div>
+        <div class="modal-contact__discription">
+          «ГИПромСервис» (ООО «ГИПромСервис»)
+        </div>
+      </div>
+
+      <div class="modal-contact__item">
+        <div class="modal-contact__name">
+          Директор
+        </div>
+        <div class="modal-contact__discription">
+          Лукин Александр Сергеевич<br>
+          тел. 8(8332) 44-02-62
+        </div>
+      </div>
+
+      <div class="modal-contact__item">
+        <div class="modal-contact__name">
+          Режим работы
+        </div>
+        <div class="modal-contact__discription">
+          Пн - Пт
+          8:00 - 17:00
+        </div>
+      </div>
+
+      <div class="modal-contact__item">
+        <div class="modal-contact__name">
+          Приём граждан
+        </div>
+        <div class="modal-contact__discription">
+          г.Киров, ул. Октябрьский проспект, 24а (здание ТЦ Лепсе, 4 этаж)
+        </div>
+      </div>
+
+      <div class="modal-contact__item">
+        <div class="modal-contact__name">
+          Почтовый/фактический адрес
+        </div>
+        <div class="modal-contact__discription">
+          г.Киров, ул. Октябрьский проспект, 24а (здание ТЦ Лепсе, 4 этаж)
+        </div>
+      </div>
+
+      <div class="modal-contact__item">
+        <div class="modal-contact__name">
+          Аварийно-диспетчерская служба
+        </div>
+        <div class="modal-contact__discription">
+          8(8332)73-68-58<br>
+          Режим работы — круглосуточно
+        </div>
+      </div>
+
+      <div class="modal-contact__item">
+        <div class="modal-contact__name">
+          Бухгалтерия и паспортный стол
+        </div>
+        <div class="modal-contact__discription">
+          8(8332)40-83-38
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20220407213100"></script>
+<!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220407213100"></script> -->
+<script src="js/app.min.js?_v=20220407213100"></script>
+
+
+</body>
+
+</html>
