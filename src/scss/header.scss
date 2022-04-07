@@ -1,0 +1,219 @@
+.nav-bar {
+	position: fixed;
+	max-width: $container;
+	width: 100%;
+	@include adaptiv-value-to-end("height", 89, 82, $containerAdaptiv, $mdTable-noPX);
+	@include adaptiv-value-to("padding-left", 96, 41, $containerAdaptiv, $mdTable-noPX);
+	@include adaptiv-value-to("padding-right", 96, 41, $containerAdaptiv, $mdTable-noPX);
+	@include adaptiv-value-noStart-to-end("padding-left", 41, 20, $mdTable-noPX, 420);
+	@include adaptiv-value-noStart-to-end("padding-right", 41, 20, $mdTable-noPX, 420);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px;
+	background-color: rgba(#fff, 0.9);
+	z-index: 50;
+	transition: 0.3s all;
+	@media (max-width: $md2) {
+		display: flex;
+		position: static;
+		height: 70px;
+	}
+	&--active {
+		height: 0;
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	&__logo {
+		& img {
+			@include adaptiv-value-to-end("width", 140, 94, $mdTable-noPX, 420);
+		}
+	}
+
+	&__list {
+		display: flex;
+		@include adaptiv-value-to-end("gap", 40, 32, $containerAdaptiv, $mdTable-noPX);
+		list-style: none;
+		@media (max-width: $md2) {
+			display: none;
+		}
+	}
+
+	&__link {
+		font-family: "RF Dewi Expanded", sans-serif;
+		font-style: normal;
+		font-weight: 600;
+		@include adaptiv-value-to-end("font-size", 15, 13, $containerAdaptiv, $mdTable-noPX);
+		line-height: 2em;
+		color: #000;
+		transition: all 0.3s;
+		&:hover {
+			color: $acsent;
+		}
+		&--active {
+			position: relative;
+			color: $acsent;
+			&::before {
+				position: absolute;
+				content: "";
+				width: 7px;
+				height: 7px;
+				left: 50%;
+				bottom: -20px;
+				border-radius: 50%;
+				transform: translateX(-50%);
+				background-color: $acsent;
+			}
+		}
+	}
+
+	&__phone {
+		display: none;
+		& img {
+			width: 27px;
+			height: 27px;
+		}
+		@media (max-width: $md2) {
+			display: block;
+		}
+	}
+}
+
+.header-main {
+	display: flex;
+
+	@media (max-width: $md2) {
+		display: block;
+	}
+	&__inner {
+		flex: 1 0 43.4623%;
+		padding: 42px 26px 103px 103px;
+		@include adaptiv-value-to("padding-left", 103, 41, $containerAdaptiv, $mdTable-noPX);
+		@include adaptiv-value-noStart-to-end("padding-left", 41, 20, $mdTable-noPX, 420);
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@media (max-width: $md2) {
+			display: block;
+		}
+	}
+
+	&__logo {
+		flex: 1 0 auto;
+		margin-bottom: 30px;
+		@media (max-width: $md2) {
+			display: none;
+		}
+	}
+
+	&__title {
+		margin-bottom: 45px;
+		@include adaptiv-value-to-end("font-size", 40, 33, $containerAdaptiv, $mdTable-noPX);
+		@include adaptiv-value-noStart-to-end("font-size", 33, 27, $mdTable-noPX, 420);
+		@include adaptiv-value-noStart-to-end("font-size", 27, 23, 420, 320);
+	}
+
+	&__text {
+		@include adaptiv-value-to-end("font-size", 14, 13, $containerAdaptiv, $mdTable-noPX);
+		@include adaptiv-value-noStart-to-end("font-size", 13, 12, $mdTable-noPX, 420);
+		line-height: 18px;
+		letter-spacing: -0.02em;
+		color: $dark;
+	}
+
+	&__nav {
+		// min-width: 690px;
+		display: flex;
+		flex: 1 1 56.5377%;
+		@media (max-width: $md2) {
+			overflow-x: auto;
+		}
+	}
+
+	&__items {
+		flex: 0 1 43.49%;
+		width: 43.49%;
+		min-width: 345px;
+	}
+	&__item {
+		position: relative;
+		@include adaptiv-value-to-end("padding-left", 46, 31, $containerAdaptiv, $mdTable-noPX);
+		@include adaptiv-value-to-end("padding-right", 46, 31, $containerAdaptiv, $mdTable-noPX);
+		@include adaptiv-value-to-end("padding-top", 60, 35, $containerAdaptiv, $mdTable-noPX);
+		@include adaptiv-value-noStart-to-end("padding-top", 42, 31, $mdTable-noPX, 420);
+	}
+
+	&__item-1 {
+		// min-width: 300px;
+		@include adaptiv-value-to("min-height", 855, 700, $containerAdaptiv, $mdTable-noPX);
+		@include adaptiv-value-noStart-to-end("min-height", 700, 600, $mdTable-noPX, 420);
+		flex: 0 1 56.51%;
+		background: url(../images/header-nav-1.jpg) center / cover no-repeat;
+	}
+
+	&__item-2 {
+		background-color: #4c5c6b;
+		height: 41.4%;
+	}
+
+	&__item-3 {
+		height: 58.6%;
+		background: url(../images/header-nav-3.jpg) center / cover no-repeat;
+	}
+
+	&__item-title {
+		padding-bottom: 21px;
+		@include adaptiv-value-to-end("font-size", 30, 25, $containerAdaptiv, $mdTable-noPX);
+		@include adaptiv-value-noStart-to-end("font-size", 25, 18, $mdTable-noPX, 420);
+		line-height: 35px;
+		letter-spacing: -0.03em;
+		color: $text-white;
+	}
+
+	&__item-text {
+		font-family: "Raleway";
+		font-style: normal;
+		font-weight: 400;
+		@include adaptiv-value-to-end("font-size", 14, 13, $containerAdaptiv, $mdTable-noPX);
+		@include adaptiv-value-noStart-to-end("font-size", 13, 12, $mdTable-noPX, 420);
+		line-height: 18px;
+		letter-spacing: -0.02em;
+		color: $text-white;
+		& span {
+			display: block;
+			white-space: nowrap;
+			font-family: "RF Dewi Expanded";
+			font-style: normal;
+			@include adaptiv-value-to-end("font-size", 16, 15, $containerAdaptiv, $mdTable-noPX);
+			@include adaptiv-value-noStart-to-end("font-size", 15, 14, $mdTable-noPX, 420);
+			font-weight: 600;
+			line-height: 20px;
+		}
+		& p {
+			padding-bottom: 3px;
+			padding-top: 48px;
+		}
+	}
+
+	&__item-arrow {
+		position: absolute;
+		content: "";
+		@include adaptiv-value-to-end("width", 73, 50, $containerAdaptiv, $mdTable-noPX);
+		@include adaptiv-value-to-end("height", 73, 50, $containerAdaptiv, $mdTable-noPX);
+		bottom: 30px;
+		left: 37px;
+		border-radius: 50%;
+		background: rgba(#fff, 0.5) url(../images/icons/arrow-dawn-black.svg) center no-repeat;
+		transition: 0.3s all;
+		@media (min-width: $mdTable) {
+			&:hover {
+				background-color: rgba($acsent, 0.76);
+			}
+		}
+		@media (max-width: $mdTable) {
+			background: rgba($acsent, 1) url(../images/icons/arrow-dawn-black-sm.svg) center no-repeat;
+		}
+	}
+}

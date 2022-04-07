@@ -1,0 +1,24 @@
+.modal-news {
+  position: fixed;
+  z-index: 60;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+
+  overflow-y: auto;
+  display: none;
+  &--active {
+    display: flex;
+  }
+  &__wrapper {
+    margin: 50px auto;
+    @include adaptiv-value-to-end("width", 1248, 968, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("width", 968, 300, $mdTable-noPX, 320);
+    padding: 20px 32px 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}

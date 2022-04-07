@@ -1,0 +1,161 @@
+.news-list {
+  position: fixed;
+  z-index: 60;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+
+  overflow-y: auto;
+  display: none;
+  &--active {
+    display: flex;
+  }
+  &__wrapper {
+    margin: 50px auto;
+    @include adaptiv-value-to-end("width", 1248, 968, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("width", 968, 300, $mdTable-noPX, 320);
+    padding: 20px 32px 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow-x: hidden;
+  }
+
+  &__top {
+    @include adaptiv-value-to-end("margin-bottom", 86, 64, $containerAdaptiv, $mdTable-noPX);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__top-link {
+    padding-left: 45px;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 500;
+    @include adaptiv-value-to("font-size", 18, 16, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("font-size", 16, 14, $mdTable-noPX, 420);
+    color: #a6a6a6;
+    border: none;
+    background: transparent url(../images/icons/arrow-grey.svg) left center no-repeat;
+    cursor: pointer;
+    transition: 0.3s all;
+    &:hover {
+      margin-left: -10px;
+      padding-left: 55px;
+    }
+  }
+
+  &__top-close {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent url(../images/icons/close-grey.svg) center / cover no-repeat;
+    cursor: pointer;
+    transition: 0.3s all;
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__item {
+    margin-bottom: 130px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    @include adaptiv-value-to-end("margin-bottom", 88, 58, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("margin-bottom", 58, 40, $mdTable-noPX, 320);
+    max-width: 870px;
+    @include adaptiv-value-to("font-size", 40, 35, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("font-size", 35, 18, $mdTable-noPX, 320);
+  }
+
+  &__text {
+    @include adaptiv-value-to-end("margin-bottom", 72, 48, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("margin-bottom", 48, 40, $mdTable-noPX, 320);
+    max-width: 709px;
+    @include adaptiv-value-to("font-size", 18, 17, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("font-size", 17, 14, $mdTable-noPX, 420);
+    & p {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__images {
+    width: 100%;
+  }
+
+  &__images-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  &__images-2-1 {
+    width: 105%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // margin-right: -30px;
+    & img:last-child {
+      transform: translate(-10%, 15%);
+    }
+  }
+
+  &__images-6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    @media (max-width: $md2) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    counter-reset: num;
+  }
+
+  &__list-item {
+    @include adaptiv-value-to-end("margin-bottom", 28, 20, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("margin-bottom", 20, 15, $mdTable-noPX, 320);
+    padding-left: 67px;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    @include adaptiv-value-to("font-size", 18, 17, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("font-size", 17, 14, $mdTable-noPX, 420);
+    line-height: 1.67;
+    color: #000000;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "0" counter(num) ". "; /* Выводим число */
+      counter-increment: num; /* Увеличиваем значение счётчика */
+      font-family: "RF Dewi Expanded";
+      font-style: normal;
+      font-weight: 600;
+      @include adaptiv-value-to("font-size", 25, 24, $containerAdaptiv, $mdTable-noPX);
+      @include adaptiv-value-noStart-to-end("font-size", 24, 22, $mdTable-noPX, 420);
+      color: #6c9dc6;
+      left: 0;
+      top: -5px;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+.object-modal {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  &--active {
+    display: flex;
+  }
+
+  &__close-btn {
+    position: absolute;
+    padding: 0;
+    @include adaptiv-value-to-end("width", 73, 50, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-to-end("height", 73, 50, $containerAdaptiv, $mdTable-noPX);
+    top: 25px;
+    right: 27px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.76);
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: "";
+      @include adaptiv-value-to-end("width", 22, 15, $containerAdaptiv, $mdTable-noPX);
+      @include adaptiv-value-to-end("height", 22, 15, $containerAdaptiv, $mdTable-noPX);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url(../images/icons/close.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__wrapper {
+    max-height: 90vh;
+    height: 100%;
+    @include adaptiv-value-to("width", 1248, 968, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("margin-left", 41, 20, $mdTable-noPX, 420);
+    @include adaptiv-value-noStart-to-end("margin-right", 41, 20, $mdTable-noPX, 420);
+    // @include adaptiv-value-to("height", 800, 744, $containerAdaptiv, $mdTable-noPX);
+    display: flex;
+    background-color: rgba($blue, 1);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    @media (max-width: $md2) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    width: 33%;
+    @include adaptiv-value-to-end("padding-top", 63, 50, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("padding-top", 50, 40, $mdTable-noPX, 420);
+
+    @include adaptiv-value-to-end("padding-left", 55, 40, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("padding-left", 40, 30, $mdTable-noPX, 420);
+    @include adaptiv-value-to-end("padding-right", 55, 40, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("padding-right", 40, 30, $mdTable-noPX, 420);
+    display: flex;
+    flex-direction: column;
+    @media (max-width: $md2) {
+      width: 100%;
+    }
+  }
+
+  &__item-title {
+    @include adaptiv-value-to-end("margin-bottom", 96, 72, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("margin-bottom", 72, 48, $mdTable-noPX, 420);
+    font-family: "RF Dewi Expanded";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    @include adaptiv-value-to-end("font-size", 30, 25, $containerAdaptiv, $mdTable-noPX);
+    line-height: 1.17em;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+  }
+
+  &__item-tabs {
+    flex-grow: 1;
+  }
+
+  &__item-tab {
+    margin-bottom: 12px;
+    flex-grow: 1;
+    display: block;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    @include adaptiv-value-to("font-size", 18, 17, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("font-size", 17, 14, $mdTable-noPX, 420);
+    line-height: 1.66;
+    letter-spacing: 0.015em;
+    color: #ffffff;
+    transition: 0.3s all;
+    &--active {
+      color: #f1b99d;
+    }
+  }
+
+  &__item-bottom {
+    padding-top: 26px;
+    padding-bottom: 32px;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.28);
+  }
+
+  &__maps {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__map {
+    display: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+    &--active {
+      display: flex;
+    }
+    @media (max-width: $md2) {
+      height: auto;
+      // align-items: flex-start;
+      align-self: flex-start;
+    }
+  }
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Гипром Сервис'
+})
+
+<body>
+  @@include('html/header.html', {})
+  <main>
+    <div class="container">
+
+      <section id="about" class="about">
+        <h2 class="big-title about__big-title">О компании</h2>
+        <div class="about__inner">
+          <div class="about__images">
+            <img class="about__image-1" src="./images/about-1.jpg" alt="hous">
+            <img class="about__image-2" src="./images/about-2.jpg" alt="hous">
+            <img class="about__image-3" src="./images/about-3.jpg" alt="hous">
+          </div>
+          <ol class="about__list">
+            <li class="text about__list-item">Заключаем договоры на управление, содержание и текущий ремонт общего
+              имущества
+              в многоквартирных жилых домах с физическими и юридическими лицами, являющимися собственниками таких домов,
+              ТСЖ, жилищно–строительными кооперативами.
+            </li>
+            <li class="text about__list-item">Мы являемся частью группы компаний, занимающейся проектированием,
+              поставкой,
+              монтажом всех инженерных систем, включая отопление, водоснабжение, вентиляцию и электроснабжение, а также
+              ремонтными работами в строительной отрасли (крыши, фасады и т.п.).</li>
+            <li class="text about__list-item">Приглашаем к сотрудничеству, оказываем помощь в проведении общих собраний
+              собственников: выбор способа управления (образование ТСН), переход на специальный счет по кап. ремонту и
+              т.д. </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <h2 class="title services__title">Предлагаем большой выбор услуг для вашей квартиры
+        </h2>
+        <h3 class="big-title services__big-title">Услуги</h3>
+
+        <div class="services__slider slider swiper">
+
+          <div class="slider__wrapper swiper-wrapper ">
+            <div class="slider__item swiper-slide">
+              <img class="slider__img" src="./images/slide-1.jpg" alt="slide-1">
+              <h4 class="slider__item-title">Отделочные работы</h4>
+              <div class="slider__item-text">Выполним работы от замены стекол до перестилки дощатого пола или линолеума
+              </div>
+              <a class="slider__item-bottom" href="#">Перейти к прайсу</a>
+            </div>
+
+            <div class="slider__item swiper-slide">
+              <img class="slider__img" src="./images/slide-2.jpg" alt="slide-2">
+              <h4 class="slider__item-title">Строительные работы</h4>
+              <div class="slider__item-text">Выполним работы от замены стекол до перестилки дощатого пола или линолеума
+              </div>
+              <a class="slider__item-bottom" href="#">Перейти к прайсу</a>
+            </div>
+
+            <div class="slider__item swiper-slide">
+              <img class="slider__img" src="./images/slide-3.jpg" alt="slide-3">
+              <h4 class="slider__item-title">Электро-монтажные работы</h4>
+              <div class="slider__item-text">Выполним работы от замены стекол до перестилки дощатого пола или линолеума
+              </div>
+              <a class="slider__item-bottom" href="#">Перейти к прайсу</a>
+            </div>
+
+            <div class="slider__item swiper-slide">
+              <img class="slider__img" src="./images/slide-4.jpg" alt="slide-4">
+              <h4 class="slider__item-title">Сантехнические работы</h4>
+              <div class="slider__item-text">Выполним работы от замены стекол до перестилки дощатого пола или линолеума
+              </div>
+              <a class="slider__item-bottom" href="#">Перейти к прайсу</a>
+            </div>
+
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section id="object" class="object">
+        <h2 class="big-title object__big-title">Объекты</h2>
+        <div class="object_number">
+          <span>01.</span>
+          Сутырина, 3
+        </div>
+        <div class="object__wrapper">
+          <div class="object__images">
+            <img class="object__img-1" src="./images/object-1.jpg" alt="object">
+            <img class="object__img-2" src="./images/object-2.jpg" alt="object">
+          </div>
+          <div class="object__discription">
+            <h3 class="title object__discription-title">Помогаем жителям дома экономить до
+              3 млн рублей в год </h3>
+            <div class="object__discription-text">
+              <p>
+                В тесном взаимодействии с правлением ТСЖ и жителями в течении года подготовили и провели работы по
+                энергоэффективному ремонту на сумму 4,41 млн. руб., из которых 80% это финансовая поддержка Фонда
+                содействия реформирования ЖКХ.
+              </p>
+              <p>
+                Были установлены автоматизированные узлы отопления с погодозависимым регулированием параметров
+                теплоносителя в системе отопления в каждом подъезде, капитальный ремонт кровли, утепление подвальных
+                помещений, замена окон и наружных входных дверей в подъездах.
+              </p>
+            </div>
+            <a class="object__discription-link" href="#">Все объекты</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="news" class="news">
+        <h3 class="news__title">новости</h3>
+        <h3 class="big-title news__big-title">Будьте в курсе событий</h3>
+        <div class="news__images">
+          <img class="news__img-1" src="./images/news-1.jpg" alt="картинка">
+          <img class="news__img-2" src="./images/news-2.jpg" alt="картинка">
+          <img class="news__img-3" src="./images/news-3.jpg" alt="картинка">
+        </div>
+        <div class="news__items">
+          <div class="news__item">
+            <h4 class="news__item-title">Пилотный проект по энергоэффективному капремонту</h4>
+            <div class="news__item-text">
+              <p>
+                Кировская область получит из средств Фонда содействия реформирования ЖКХ 3,52 млн рублей. Общая
+                стоимость работ по ...
+              </p>
+            </div>
+            <div class="news__item-bottom">
+              <div class="news__item-data">15.02.2021</div>
+              <a class="news__item-link all-news__item-btn-1" href="#"><span>Подробнее</span></a>
+            </div>
+          </div>
+
+          <div class="news__item">
+            <h4 class="news__item-title">Капремонт на Сутырина 3</h4>
+            <div class="news__item-text">
+              <p>
+                Капремонт позволил жителям дома на Сутырина сэкономить на «коммуналке».
+              </p>
+            </div>
+            <div class="news__item-bottom">
+              <div class="news__item-data">02.02.2021</div>
+              <a class="news__item-link all-news__item-btn-2" href="#"><span>Подробнее</span></a>
+            </div>
+          </div>
+
+          <div class="news__item">
+            <h4 class="news__item-title">Замена бракованных водосчетчиков</h4>
+            <div class="news__item-text">
+              <p>
+                Мы производим работы по замене бракованных водосчетчиков в квартирах. На данный момент насчитывается
+                более ...
+              </p>
+            </div>
+            <div class="news__item-bottom">
+              <div class="news__item-data">01.01.2021</div>
+              <a class="news__item-link all-news__item-btn-3" href="#"><span>Подробнее</span></a>
+            </div>
+          </div>
+        </div>
+        <a class="news__btn" href="#"><span>Все новости</spa></a>
+      </section>
+
+
+    </div>
+  </main>
+  @@include('html/footer.html', {})
+  @@include('html/object-modal.html', {})
+  @@include('html/news-list.html', {})
+  @@include('html/all-news.html', {})
+  @@include('html/modal-news.html', {})
+  @@include('html/modal-contact.html', {})
+  @@include('html/scripts.html', {})
+
+
+</body>
+
+</html>

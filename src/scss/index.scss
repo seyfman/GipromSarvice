@@ -1,0 +1,679 @@
+.about {
+  min-height: 1120px;
+  padding-top: 50px;
+  background-color: rgba(237, 237, 237, 0.72);
+  overflow: hidden;
+  @media (max-width: $md3) {
+    min-height: auto;
+  }
+
+  &__big-title {
+    @include adaptiv-value-to-end("margin-bottom", 110, 80, $mdTable-noPX, 420);
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__images {
+    width: 55%;
+    position: relative;
+    @media (max-width: $md3) {
+      width: 0;
+      margin: 0;
+    }
+  }
+
+  &__image-1 {
+    position: absolute;
+    @include adaptiv-value-to-end("width", 639, 395, $containerAdaptiv, $mdTable-noPX);
+    top: 0;
+    left: 0;
+    animation: image-anim 10s linear infinite;
+    @media (max-width: $md3) {
+      animation: image-anim 10s linear infinite;
+      opacity: 0;
+    }
+  }
+
+  &__image-2 {
+    position: absolute;
+    @include adaptiv-value-to-end("width", 425, 332, $containerAdaptiv, $mdTable-noPX);
+    // top: 35%;
+    top: 250px;
+    left: 32%;
+    animation: image-anim 10s linear infinite 3s;
+    @media (max-width: $md3) {
+      animation: image-anim 10s linear infinite 3.33s;
+      top: 100px;
+      left: 0;
+      opacity: 0;
+    }
+  }
+
+  &__image-3 {
+    position: absolute;
+    @include adaptiv-value-to-end("width", 336, 301, $containerAdaptiv, $mdTable-noPX);
+    top: 45%;
+    left: 13%;
+    animation: image-anim 10s linear infinite 6s;
+    @media (max-width: $md3) {
+      wanimation: image-anim 10s linear infinite 6.67s;
+      top: 200px;
+      left: 0;
+      opacity: 0;
+      transform: scale(0.7);
+    }
+  }
+
+  @keyframes image-anim {
+    0% {
+      opacity: 1;
+      transform: translateX(-700px);
+    }
+    20% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    80% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: $md2) {
+    @keyframes image-anim {
+      0% {
+        transform: translateX(-100vw);
+        opacity: 0.3;
+      }
+
+      50% {
+        transform: translateX(100vw);
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateX(100vw);
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__list {
+    margin: 0 0 0 auto;
+    width: 45%;
+    list-style: none;
+    counter-reset: num;
+    @media (max-width: $md2) {
+      width: 100%;
+      margin: 0;
+      padding-left: 10px;
+    }
+  }
+
+  &__list-item {
+    @include adaptiv-value-to("padding-left", 132, 97, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("padding-left", 97, 61, $mdTable-noPX, 420);
+    padding-right: 7px;
+    margin-bottom: 80px;
+    @include adaptiv-value-to("font-size", 18, 17, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("font-size", 17, 14, $mdTable-noPX, 420);
+    line-height: 1.7em;
+    letter-spacing: 0.015em;
+    color: $text-dark;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "0" counter(num) ". "; /* Выводим число */
+      counter-increment: num; /* Увеличиваем значение счётчика */
+      font-family: "RF Dewi Expanded";
+      font-style: normal;
+      font-weight: 600;
+      @include adaptiv-value-to("font-size", 45, 40, $containerAdaptiv, $mdTable-noPX);
+      @include adaptiv-value-noStart-to-end("font-size", 40, 30, $mdTable-noPX, 420);
+      line-height: 56px;
+      color: #6c9dc6;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+.services {
+  overflow: hidden;
+  padding-bottom: 50px;
+  @include adaptiv-value-to-end("padding-top", 168, 126, $containerAdaptiv, $mdTable-noPX);
+  @include adaptiv-value-noStart-to-end("padding-top", 126, 72, $mdTable-noPX, 420);
+
+  @include adaptiv-value-to-end("padding-left", 96, 41, $containerAdaptiv, $mdTable-noPX);
+  @include adaptiv-value-noStart-to-end("padding-left", 41, 5, $mdTable-noPX, 420);
+  @include adaptiv-value-to-end("padding-right", 96, 41, $containerAdaptiv, $mdTable-noPX);
+  @include adaptiv-value-noStart-to-end("padding-right", 41, 5, $mdTable-noPX, 420);
+  &__title {
+    max-width: 850px;
+    @include adaptiv-value-to-end("padding-bottom", 122, 92, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("padding-bottom", 92, 80, $mdTable-noPX, 420);
+  }
+
+  &__big-title {
+    color: #f2f2f2;
+    position: relative;
+    z-index: -1;
+  }
+}
+
+.slider {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 47px 33px;
+    @include adaptiv-value-to-end("padding-top", 47, 41, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("padding-top", 41, 34, $mdTable-noPX, 420);
+
+    position: relative;
+    z-index: 1;
+    @include adaptiv-value-to-end("width", 312, 295, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("width", 295, 260, $mdTable-noPX, 420);
+    @include adaptiv-value-to-end("height", 455, 356, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("height", 356, 298, $mdTable-noPX, 420);
+    background: rgba(0, 0, 0, 0.14);
+    color: $white;
+    overflow: hidden;
+    transition: 0.3s all;
+    &:hover {
+      z-index: 100;
+      transform: scale(1.15);
+      & .slider__img {
+        filter: grayscale(0%);
+      }
+      & .slider__item-text {
+        flex: 1 0 auto;
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 400;
+        @include adaptiv-value-to("font-size", 14, 13, $containerAdaptiv, $mdTable-noPX);
+        @include adaptiv-value-noStart-to-end("font-size", 13, 12, $mdTable-noPX, 420);
+        line-height: 1.28em;
+        letter-spacing: -0.02em;
+        visibility: visible;
+        opacity: 1;
+      }
+      & .slider__item-bottom {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: 0.3s all;
+  }
+
+  &__item-title {
+    margin-bottom: 20px;
+    font-family: "RF Dewi Expanded";
+    font-style: normal;
+    font-weight: 600;
+    @include adaptiv-value-to("font-size", 24, 20, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("font-size", 20, 18, $mdTable-noPX, 420);
+    line-height: 1.29em;
+  }
+
+  &__item-text {
+    flex: 1 0 auto;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 0;
+    transition: 0.3s all;
+  }
+
+  &__item-bottom {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s all;
+
+    display: block;
+    width: 100%;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    @include adaptiv-value-to-end("font-size", 18, 13, $mdTable-noPX, 420);
+    line-height: 20px;
+    color: $white;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 73px;
+      height: 73px;
+      bottom: 0px;
+      right: 0px;
+      transform: translateY(40%);
+      border-radius: 50%;
+      background: rgba($acsent, 0.8) url(../images/icons/arrow-white.svg) center no-repeat;
+      transition: 0.3s all;
+    }
+    &:hover {
+      text-decoration: underline;
+      &::after {
+        background-color: rgba($acsent, 1);
+      }
+    }
+  }
+}
+
+.swiper {
+  overflow: visible;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -50px;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(#4c5c6b, 0.2);
+  &-active {
+    background-color: #4c5c6b !important;
+  }
+}
+
+.object {
+  overflow: hidden;
+  @include adaptiv-value-to-end("padding-top", 168, 126, $containerAdaptiv, $mdTable-noPX);
+  @include adaptiv-value-noStart-to-end("padding-top", 126, 72, $mdTable-noPX, 420);
+  &_number {
+    margin-top: 80px;
+    font-family: "RF Dewi Expanded";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 45px;
+    letter-spacing: -0.03em;
+    color: #000000;
+
+    & span {
+      @include adaptiv-value-to-end("margin-right", 30, 18, $mdTable-noPX, 420);
+      font-family: "RF Dewi Expanded";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 45px;
+      line-height: 56px;
+      letter-spacing: -0.03em;
+      color: #f1b99d;
+    }
+  }
+
+  &__big-title {
+    color: #f2f2f2;
+  }
+
+  &__wrapper {
+    @include adaptiv-value-to-end("margin-top", 75, 40, $mdTable-noPX, 420);
+    display: flex;
+    @media (max-width: $md2) {
+      display: block;
+    }
+  }
+
+  &__images {
+    width: 50%;
+    max-width: 100vw;
+    @media (max-width: $md2) {
+      width: 100%;
+      // margin-bottom: 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__img-1 {
+    @include adaptiv-value-to-end("width", 575, 411, $containerAdaptiv, $mdTable-noPX);
+    height: auto;
+    display: block;
+  }
+
+  &__img-2 {
+    @include adaptiv-value-to-end("width", 418, 340, $containerAdaptiv, $mdTable-noPX);
+    height: auto;
+    display: block;
+
+    position: relative;
+    left: 30%;
+    top: -20%;
+    @media (max-width: $md2) {
+      position: relative;
+      top: -100px;
+      right: 20px;
+    }
+  }
+
+  &__discription {
+    width: 50%;
+    @include adaptiv-value-to-end("padding-right", 100, 20, $containerAdaptiv, 420);
+    padding-left: 90px;
+    @include adaptiv-value-to-end("padding-left", 100, 20, $containerAdaptiv, 420);
+    @media (max-width: $md2) {
+      width: 100%;
+    }
+  }
+
+  &__discription-title {
+    margin-bottom: 50px;
+  }
+
+  &__discription-text {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    @include adaptiv-value-to("font-size", 18, 17, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("font-size", 17, 14, $mdTable-noPX, 420);
+    line-height: 1.66em;
+    letter-spacing: 0.015em;
+    color: $text-dark;
+    & p {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__discription-link {
+    display: block;
+    margin-bottom: 96px;
+    padding-left: 97px;
+
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 500;
+    @include adaptiv-value-to("font-size", 24, 20, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("font-size", 20, 18, $mdTable-noPX, 420);
+    line-height: 1em;
+    color: #4c5c6b;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      @include adaptiv-value-to-end("width", 73, 50, $containerAdaptiv, $mdTable-noPX);
+      @include adaptiv-value-to-end("height", 73, 50, $containerAdaptiv, $mdTable-noPX);
+      bottom: 0px;
+      left: 0px;
+      transform: translateY(40%);
+      border-radius: 50%;
+      background: rgba($acsent, 0.8) url(../images/icons/arrow-white.svg) center no-repeat;
+      transition: 0.3s all;
+    }
+    @media (min-width: $mdTable) {
+      &:hover {
+        text-decoration: underline;
+        &::after {
+          background-color: rgba($acsent, 1);
+        }
+      }
+    }
+    @media (max-width: $mdTable) {
+      &::after {
+        background: rgba($acsent, 1) url(../images/icons/arrow-white-sm.svg) center no-repeat;
+      }
+    }
+  }
+}
+
+.news {
+  @include adaptiv-value-to-end("padding-top", 94, 82, $containerAdaptiv, $mdTable-noPX);
+  @include adaptiv-value-noStart-to-end("padding-top", 82, 40, $mdTable-noPX, 420);
+  @include adaptiv-value-to-end("padding-bottom", 83, 70, $containerAdaptiv, $mdTable-noPX);
+  @include adaptiv-value-to-end("padding-left", 96, 41, $containerAdaptiv, $mdTable-noPX);
+  @include adaptiv-value-noStart-to-end("padding-left", 41, 20, $mdTable-noPX, 420);
+  @include adaptiv-value-to-end("padding-right", 94, 40, $containerAdaptiv, $mdTable-noPX);
+  @include adaptiv-value-noStart-to-end("padding-right", 40, 20, $mdTable-noPX, 420);
+
+  background-color: $blue;
+  overflow-x: hidden;
+  &__title {
+    @include adaptiv-value-to-end("margin-bottom", 93, 72, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("margin-bottom", 72, 56, $mdTable-noPX, 420);
+    font-family: "RF Dewi Expanded";
+    font-style: normal;
+    font-weight: 400;
+    @include adaptiv-value-to("font-size", 18, 15, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("font-size", 15, 11, $mdTable-noPX, 420);
+    line-height: 1.11em;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  &__big-title {
+    @include adaptiv-value-to-end("margin-bottom", 74, 50, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("margin-bottom", 183, 96, $mdTable-noPX, 420);
+    color: $acsent;
+  }
+
+  &__images {
+    @media (max-width: $mdTable) {
+      display: none;
+    }
+  }
+
+  &__img-1 {
+    width: 200px;
+    height: 136px;
+    position: relative;
+    animation: news-image-anim-1 12s linear infinite;
+    opacity: 0;
+  }
+
+  &__img-2 {
+    width: 132px;
+    height: 193px;
+    position: relative;
+    animation: news-image-anim-2 12s linear infinite 5s;
+    opacity: 0;
+  }
+
+  &__img-3 {
+    width: 237px;
+    height: 159px;
+    transform: translateY(-50px);
+    animation: news-image-anim-3 12s linear infinite 10s;
+    opacity: 0;
+  }
+
+  &__items {
+    @include adaptiv-value-to-end("margin-bottom", 97, 90, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("margin-bottom", 90, 64, $mdTable-noPX, 420);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @include adaptiv-value-to-end("gap", 114, 93, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("gap", 93, 20, $mdTable-noPX, 420);
+    @media (max-width: $md3) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    min-width: 130px;
+    @include adaptiv-value-to-end("min-height", 300, 260, $containerAdaptiv, $mdTable-noPX);
+    // @include adaptiv-value-to-end("width", 340, 261, $containerAdaptiv, $mdTable-noPX);
+    // @include adaptiv-value-noStart-to-end("width", 261, 157, $mdTable-noPX, 420);
+    &:last-child {
+      @media (max-width: $md3) {
+        display: none;
+      }
+    }
+  }
+
+  &__item-title {
+    @include adaptiv-value-to-end("margin-bottom", 32, 24, $containerAdaptiv, $mdTable-noPX);
+    font-family: "RF Dewi Expanded";
+    font-style: normal;
+    font-weight: 600;
+    @include adaptiv-value-to("font-size", 24, 20, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("font-size", 20, 18, $mdTable-noPX, 420);
+    line-height: 1.29em;
+    color: $white;
+    overflow: hidden;
+    // text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  &__item-text {
+    flex: 1 0 auto;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    @include adaptiv-value-to("font-size", 14, 13, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("font-size", 13, 12, $mdTable-noPX, 420);
+    line-height: 1.29em;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+  }
+
+  &__item-bottom {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item-data {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    @include adaptiv-value-to-end("font-size", 12, 11, $containerAdaptiv, $mdTable-noPX);
+    color: $white;
+  }
+
+  &__item-link {
+    @include adaptiv-value-to-end("padding-right", 97, 72, $containerAdaptiv, $mdTable-noPX);
+
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: $acsent;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      @include adaptiv-value-to-end("width", 73, 50, $containerAdaptiv, $mdTable-noPX);
+      @include adaptiv-value-to-end("height", 73, 50, $containerAdaptiv, $mdTable-noPX);
+      bottom: 0px;
+      right: 0px;
+      transform: translateY(35%);
+      border-radius: 50%;
+      background: rgba($acsent, 0) url(../images/icons/arrow-akcent.svg) center no-repeat;
+      transition: 0.3s all;
+    }
+    @media (min-width: $mdTable) {
+      &:hover {
+        &::after {
+          background: rgba($acsent, 1) url(../images/icons/arrow-blue.svg) center no-repeat;
+        }
+      }
+    }
+    @media (max-width: $mdTable) {
+      &::after {
+        transform: translateY(40%);
+        border-radius: 50%;
+        background: rgba($acsent, 1) url(../images/icons/arrow-blue-sm.svg) center no-repeat;
+      }
+    }
+    @media (max-width: $md2) {
+      & span {
+        display: none;
+      }
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiv-value-to-end("width", 348, 305, $containerAdaptiv, $mdTable-noPX);
+    @include adaptiv-value-noStart-to-end("width", 305, 280, $md3-noPX, 320);
+    @include adaptiv-value-to-end("height", 60, 55, $containerAdaptiv, $mdTable-noPX);
+
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: $white;
+    border: 1px solid $white;
+    border-radius: 50px;
+
+    & span {
+      padding-right: 33px;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        right: 0;
+        width: 10px;
+        height: 20px;
+        background: url(../images/icons/btn-icon.svg) no-repeat;
+      }
+    }
+  }
+}
+
+@keyframes news-image-anim-1 {
+  0% {
+    transform: translateX(-50vw);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(100vw);
+    opacity: 1;
+  }
+}
+
+@keyframes news-image-anim-2 {
+  0% {
+    transform: translate(-50vw, 50px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(100vw, 50px);
+    opacity: 1;
+  }
+}
+
+@keyframes news-image-anim-3 {
+  0% {
+    transform: translate(-80vw, -50px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(100vw, -50px);
+    opacity: 1;
+  }
+}

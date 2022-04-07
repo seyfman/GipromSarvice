@@ -1,0 +1,89 @@
+html {
+  max-width: $maxWidth;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: Raleway, sans-serif;
+  font-weight: 400;
+  background-color: $bg-color;
+  overflow-x: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  min-width: $minWidth;
+  max-width: $container + $container-padding + $container-padding;
+
+  width: 100%;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+  margin: 0 auto;
+  @media (max-width: $md3) {
+    max-width: $container;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.title {
+  font-family: "RF Dewi Expanded", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  @include adaptiv-value-to("font-size", 40, 35, $containerAdaptiv, $mdTable-noPX);
+  @include adaptiv-value-noStart-to-end("font-size", 35, 27, $mdTable-noPX, 420);
+  line-height: 1.2;
+  // @include adaptiv-value-to("line-height", 48, 41, $containerAdaptiv, $mdTable-noPX);
+  // @include adaptiv-value-noStart-to-end("line-height", 41, 32, $mdTable-noPX, 420);
+  display: flex;
+  letter-spacing: -0.03em;
+  color: #0d0d0d;
+}
+
+.big-title {
+  font-family: "RF Dewi Expanded", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  @include adaptiv-value-to("font-size", 144, 104, $containerAdaptiv, $mdTable-noPX);
+  @include adaptiv-value-noStart-to-end("font-size", 104, 50, $mdTable-noPX, 420);
+  line-height: 1em;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  color: #fffbfb;
+  animation: 15s bigTitle infinite linear;
+}
+
+@keyframes bigTitle {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
+@media (max-width: $md3) {
+  @keyframes bigTitle {
+    0% {
+      transform: translateX(100vw);
+    }
+
+    100% {
+      transform: translateX(-230vw);
+    }
+  }
+}
+
+.text {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
